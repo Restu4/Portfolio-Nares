@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restu-Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="overlay-bg"></div> <!-- Background tetap -->
+
+  <header id="navbar">
+    <div class="logo">NARES.</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dummy sections biar bisa di-scroll -->
+  <section id="home" class="home-section fade-in-section">
+    <div class="home-content align-left">
+      <h1 class="typing-text">I'M A&nbsp;<span id="dynamic-role"></span></h1>
+      <p class="subtext">A Tech All‑Rounder shaping the future through code, data, and innovation</p>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/jzfghl/" target="_blank">
+          <img src="icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/in/mohamad-restu-mutia-sena-507b7b36a/?trk=opento_sprofile_details"
+          target="_blank">
+          <img src="icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Restu4" target="_blank">
+          <img src="icons/github.svg" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="blur-wrapper">
+    <section id="about" class="about-section fade-in-section">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="assets/about.jpg" alt="Foto Profil">
+        </div>
+
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi, I’m Restu, a Network Engineer with experience in Data Analysis, Front-End Web Development, IT Support,
+            and
+            UI Design. I’ve completed a warehouse stock management database system and a laundry management system
+            project, focusing on configuring and optimizing networks for stability and performance. I’m now passionate
+            about advancing in cybersecurity and data engineering to build smarter, secure digital solutions.
+          </p>
+
+          <div class="stats">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="icons/cert.png" alt="Certificate Icon">
+              </div>
+              <div class="stat-info">
+                <h3>Certificates</h3>
+                <p class="subtext">Professional skills certified</p>
+              </div>
+              <div class="stat-number">8</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="icons/proj.png" alt="Project Icon">
+              </div>
+              <div class="stat-info">
+                <h3>Projects</h3>
+                <p class="subtext">projects based on real clients</p>
+              </div>
+              <div class="stat-number">6</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="icons/skill.png" alt="Skill Icon">
+              </div>
+              <div class="stat-info">
+                <h3>Skills</h3>
+                <p class="subtext">From network to frontend</p>
+              </div>
+              <div class="stat-number">13</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <section id="portfolio" class="portfolio-section fade-in-section">
+      <h2 class="section-title">Portfolio</h2>
+
+      <!-- Tabs Bar -->
+      <div class="portfolio-tabs">
+        <button class="tab-btn active" data-tab="cert">Certificates</button>
+        <button class="tab-btn" data-tab="proj">Projects</button>
+        <button class="tab-btn" data-tab="skill">Skills</button>
+        <button class="tab-btn" data-tab="exp">Experience</button>
+        <button class="tab-btn" data-tab="edu">Education</button>
+      </div>
+
+      <!-- Certificates -->
+      <div class="tab-content tab-active" id="cert">
+        <div class="cert-grid fade-in-cards">
+          <div class="cert-card">
+            <img src="Cert/cert1.jpg">
+            <div class="card-body">
+              <h3>BNSP Computer and Network Engineering</h3>
+              <p>Professional certification from BNSP</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert1">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert2.jpg">
+            <div class="card-body">
+              <h3>Axelbit Certified Junior Network Engineer</h3>
+              <p>Professional certification from Axelbit</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert2">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert3.png">
+            <div class="card-body">
+              <h3>Data Analyst Intern</h3>
+              <p>Internship completion certification at PT. KGG</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert3">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert4.jpg">
+            <div class="card-body">
+              <h3>Conditional IF-Else</h3>
+              <p>MySkill bootcamp certification</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert4">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert5.jpg">
+            <div class="card-body">
+              <h3>Data Analyst Fundamental</h3>
+              <p>MySkill bootcamp certification</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert5">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert6.jpg">
+            <div class="card-body">
+              <h3>Hardware Fundamental</h3>
+              <p>Professional certification from Axioo</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert6">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert7.jpg">
+            <div class="card-body">
+              <h3>Computer Maintenance</h3>
+              <p>Professional certification from Axioo</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert7">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Cert/cert8.jpg">
+            <div class="card-body">
+              <h3>Graphic Design Fundamental</h3>
+              <p>Professional certification from Axioo</p>
+              <!-- Di setiap card sertifikat/project -->
+              <a href="#!" class="detail-btn" data-target="modal-cert8">Detail</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="tab-content" id="proj">
+        <div class="cert-grid fade-in-cards">
+          <div class="cert-card">
+            <img src="Project/proj1.png">
+            <div class="card-body">
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio website with interactive animations</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj1">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/Proj2.png">
+            <div class="card-body">
+              <h3>Skincare recommendation website</h3>
+              <p>AI-based website creation project</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj2">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/proj3.png">
+            <div class="card-body">
+              <h3>Structured Office Network</h3>
+              <p>Creating a network design structure for 3 rooms</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj3">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/proj4.png">
+            <div class="card-body">
+              <h3>Cohort Analyis Overview</h3>
+              <p>grouping processed data into data that can be analyzed</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj4">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/proj5.png">
+            <div class="card-body">
+              <h3>Office Network Design</h3>
+              <p>Create a network topology according to the case study</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj5">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/proj6.png">
+            <div class="card-body">
+              <h3>Travel Application</h3>
+              <p>Travel application to select and find out the distance of the tourist attraction</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj6">Detail</a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="Project/proj7.png">
+            <div class="card-body">
+              <h3>Laundry System Database</h3>
+              <p>System for recording laundry activities</p>
+              <a href="#!" class="detail-btn" data-target="modal-proj7">Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="tab-content" id="skill">
+        <div class="skill-grid fade-in-cards">
+          <div class="skill-card">
+            <img src="skill/s1.png" alt="HTML">
+            <p>Networking</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s2.png" alt="HTML">
+            <p>Virtual Box</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s3.png" alt="HTML">
+            <p>Power BI</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s4.png" alt="HTML">
+            <p>Microsoft Excel</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s5.png" alt="HTML">
+            <p>Python</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s6.png" alt="HTML">
+            <p>C++</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s7.png" alt="HTML">
+            <p>React JS</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s8.png" alt="HTML">
+            <p>SQL</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s9.png" alt="HTML">
+            <p>PHP</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s10.png" alt="HTML">
+            <p>Javasript</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s11.png" alt="HTML">
+            <p>CSS3</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s12.png" alt="HTML">
+            <p>HTML5</p>
+          </div>
+
+          <div class="skill-card">
+            <img src="skill/s13.png" alt="HTML">
+            <p>Figma</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="tab-content" id="exp">
+        <div class="experience-list fade-in-cards">
+
+          <div class="experience-item">
+            <img src="assets/exp2.svg" alt="Telkom Logo">
+            <div class="experience-details">
+              <h3>Graphic Design Intern – PT. Tera Data Indonusa TBK</h3>
+              <p>Create visual materials with Canva and Blender, complete design projects such as posters,
+                infographics, and 3D models according to team standards, collaborate with the design team, and document
+                the process in a structured manner.</p>
+              <p>January - March 2022</p>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <img src="assets/exp1.jpeg" alt="Shopee Logo">
+            <div class="experience-details">
+              <h3>Data Analyst Intern – Kilap Global Group</h3>
+              <p>Collect and clean data from multiple sources, analyze patterns and trends, and present results in
+                reports or dashboards that are easy for teams and management to understand.</p>
+              <p>January - February 2025</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="tab-content" id="edu">
+        <div class="cert-grid fade-in-cards">
+          <div class="cert-card">
+            <img src="assets/edu2.jpg">
+            <div class="card-body">
+              <h3>SMK Negeri 1 Cipanas</h3>
+              <p>Computer and Network Engineer – GPA: 86/100 <br> July 2021 - June 2024</p>
+              <br>
+              <p>Participated in TKJ network training and projects, handled IT infrastructure maintenance, hardware and
+                software troubleshooting, and led the LAN network setup for school events. Successfully ranked among the
+                top 5 students with network troubleshooting skills, earned network management and security
+                certifications, and scored high on system administration exams.</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="assets/edu1.jpg">
+            <div class="card-body">
+              <h3>Cakrawala University</h3>
+              <p>System Technology and Information – GPA: 3.77/4.00 <br> September 2024 - Present
+              </p>
+              <br>
+              <p>Bachelor of Technology and Information Systems (Semester 2) with a focus on Data Structure, Database
+                System, Object-Oriented Programming, and Web Client Development. Completed a dynamic web mini-project
+                (HTML, CSS, JS), minimarket inventory database design (MySQL), and user research-based redesign of the
+                Ibis Paint X interface in Figma.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <section id="contact" class="fade-in-section">
+      <h2 class="section-title">Contact</h2>
+
+      <form class="contact-form" action="https://formsubmit.co/mrestumutiasena@gmail.com" method="POST">
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thanks.html">
+
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group textarea">
+          <i class="fas fa-comment-dots"></i>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-name">Mohamad Restu Mutia Sena</div>
+      <div class="footer-contact">mrestumutiasena@gmail.com | Based in Indonesia</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/jzfghl/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mohamad-restu-mutia-sena-507b7b36a/?trk=opento_sprofile_details"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Restu4"><i class="fab fa-github"></i></a>
+      </div>
+      <div>&copy; 2025 All Rights Reserved.</div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  <!--Modal Sertifikasi 1-->
+  <div id="modal-cert1" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert1')">&times;</span>
+      <h2>BNSP Computer and Network Engineering</h2>
+      <br>
+      <p><strong>Published by:</strong> Lembaga Sertifikasi Profesi SMK Negeri 1 Cipanas.</p>
+      <p><strong>Date of issue:</strong> 06 May 2024</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1_iqstzsjNcpBcmB6SqzTEVxYTqkpymBZ/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Computer and Network Engineering Competency Certificate</strong>
+        <br>
+        This certification involves a practical exam that requires me to design and build a network infrastructure for a
+        medium-sized enterprise scenario. Tasks include topology planning, network hardware configuration, IP address
+        assignment, and the selection and documentation of over 120 devices. The exam demonstrates my ability to manage
+        and implement efficient, industry-standard network solutions.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 2-->
+  <div id="modal-cert2" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert2')">&times;</span>
+      <h2>Axelbit Certified Junior Network Engineer</h2>
+      <br>
+      <p><strong>Published by:</strong> Axelerate You Bit-by-Bit</p>
+      <p><strong>Date of issue:</strong> 23 January 2024</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1ncJrQfROygvl3j6EKlLHvXj9G7MiCG8q/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Professional certification from Axelbit</strong>
+        <br>
+        This certification is earned after completing intensive training and a competency exam in computer networking,
+        focusing on Mikrotik device configuration and management, network topology design, and small- to medium-scale
+        network infrastructure management. This certification certifies the skills of a Junior Network Engineer with a
+        technical foundation ready for industry application.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 3-->
+  <div id="modal-cert3" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert3')">&times;</span>
+      <h2>Data Analyst Intern</h2>
+      <br>
+      <p><strong>Published by:</strong> Kilap Global Group</p>
+      <p><strong>Date of issue:</strong> 13 March 2025</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1tB_xYylMLBe214zLZ6v3VkKoya0TDbax/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Internship completion certification at PT. KGG</strong>
+        <br>
+        Operate Microsoft Excel and Power BI for data processing and visualization.
+        Complete cohort and churn analyses to identify user retention and behavior patterns, supporting data-driven
+        decision-making.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 4-->
+  <div id="modal-cert4" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert4')">&times;</span>
+      <h2>Conditional IF-Else</h2>
+      <br>
+      <p><strong>Published by:</strong> MySkill</p>
+      <p><strong>Date of issue:</strong> 09 July 2024</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1TiJ_FZS4pzoogMb_MyOz9UCEn-ROSgN1/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>MySkill bootcamp certification</strong>
+        <br>
+        Attend intensive training focused on the use of Conditional IF-ELSE and Data Validation to improve data
+        processing quality. Apply these concepts in real-world case studies to structure data, minimize input errors,
+        and accelerate analysis. This bootcamp also provides an in-depth understanding of how conditional logic can
+        support data-driven decision-making in a business environment.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 5-->
+  <div id="modal-cert5" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert5')">&times;</span>
+      <h2>Data Analyst Fundamental</h2>
+      <br>
+      <p><strong>Published by:</strong> MySkill</p>
+      <p><strong>Date of issue:</strong> 03 July 2024</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1JT3rlYKYQKZWnKpy4VM9PHkfLtj8NtAk/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>MySkill bootcamp certification</strong>
+        <br>
+        Participate in intensive training focused on data cleaning and data manipulation using Excel.
+        Learn data cleaning techniques to eliminate inconsistencies, remove duplication, and reformat data to prepare it
+        for analysis. Learn advanced functions to support a more accurate and efficient data analysis process.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 6-->
+  <div id="modal-cert6" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert6')">&times;</span>
+      <h2>Hardware Fundamental</h2>
+      <br>
+      <p><strong>Published by:</strong> PT. Tera Data Indonusa TBK</p>
+      <p><strong>Date of issue:</strong> 12 October 2023</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/11vf43k8h50Vy2sslYAlOh9a2afnO1JbM/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Professional certification from Axioo</strong>
+        <br>
+        Attend training on the main components of a computer, including the function and use of each piece of hardware,
+        such as the processor, memory, storage, and I/O devices. Learn how to read and understand hardware
+        specifications, enabling you to determine device requirements based on computing needs and system performance.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 7-->
+  <div id="modal-cert7" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert7')">&times;</span>
+      <h2>Computer Maintenance</h2>
+      <br>
+      <p><strong>Published by:</strong> PT. Tera Data Indonusa TBK</p>
+      <p><strong>Date of issue:</strong> 12 October 2023</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1FMkVYGUwBbDeF4Y_i46O-YY5skb_flYT/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Professional certification from Axioo</strong>
+        <br>
+        Attend computer maintenance training, from thorough hardware cleaning and internal component checks to applying
+        thermal paste to the processor to maintain optimal performance and temperature. This training provides a
+        practical understanding of maintenance procedures to ensure device longevity and optimal performance.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Sertifikasi 8-->
+  <div id="modal-cert8" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-cert8')">&times;</span>
+      <h2>Graphic Design Fundamental</h2>
+      <br>
+      <p><strong>Published by:</strong> PT. Tera Data Indonusa TBK</p>
+      <p><strong>Date of issue:</strong> 21 December 2023</p>
+      <p><strong>Certificate Link:</strong> <a
+          href="https://drive.google.com/file/d/1FHno6wjLQ8ovUwtLkRBieQpYiDfpbqzf/view?usp=sharing" target="_blank">View
+          Certificate</a></p>
+      <br>
+      <p><strong>Professional certification from Axioo</strong>
+        <br>
+        This course covers the fundamental principles of graphic design, including effective layout, the proper use of
+        color and gradients, and an understanding of professional design terms and concepts. This course provides a
+        solid foundation for creating compelling, consistent, and communicative visual designs.
+      </p>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 1-->
+  <div id="modal-proj1" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj1')">&times;</span>
+      <h2>Portfolio Website</h2>
+      <br>
+      <p><strong>Description:</strong> Design and build a personal portfolio website using HTML, CSS, and JavaScript to
+        showcase your experience, skills, and completed projects. The primary focus of this project is to create a
+        simple initial portfolio layout, as a basis for future development of a responsive version.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, and Figma</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Smooth Scroll</li>
+        <li>Fixed Navigation Bar</li>
+        <li>Basic Animation on Scroll</li>
+        <li>Hover Effect pada Menu dan Tombol</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 2-->
+  <div id="modal-proj2" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj2')">&times;</span>
+      <h2>Skincare recommendation website</h2>
+      <br>
+      <p><strong>Description:</strong> Building a website that provides AI-based skincare product recommendations and
+        outfit of the day (OOTD) inspiration. This project is designed to help users find products and styles that suit
+        their needs and preferences through a simple and interactive interface.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, SQL, Python, and Figma</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>User Preference Input Form</li>
+        <li>AI-Based Recommendations</li>
+        <li>Dynamic Recommendation Page</li>
+        <li>Simple and Interactive UI</li>
+        <li>Product & Outfit Search System</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 3-->
+  <div id="modal-proj3" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj3')">&times;</span>
+      <h2>Structured Office Network</h2>
+      <br>
+      <p><strong>Description:</strong> Created a network design for 3 office rooms, operated Cisco devices to build star
+        and tree topologies, and ensured optimal connectivity between devices.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> Cisco and Microsoft Office</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Multi-Room Network Design</li>
+        <li>Star and Tree Topology</li>
+        <li>Cisco Device Configuration</li>
+        <li>Network Documentation</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 4-->
+  <div id="modal-proj4" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj4')">&times;</span>
+      <h2>Cohort Analyis Overview</h2>
+      <br>
+      <p><strong>Description:</strong> Cohort Analysis Overview
+        Performs cohort and churn analysis by grouping raw data into analysis-ready data, making it easier to identify
+        customer retention and behavior patterns.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> Power BI and Microsoft Excel</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Cohort Grouping</li>
+        <li>Churn Analysis</li>
+        <li>Data Cleansing & Transformation</li>
+        <li>Data Visualization</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 5-->
+  <div id="modal-proj5" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj5')">&times;</span>
+      <h2>Office Network Design</h2>
+      <br>
+      <p><strong>Description:</strong> Office Network Design
+        Designing an office network using Microsoft Visio, creating inter-room connection diagrams using star and tree
+        topologies for documentation and network infrastructure planning.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> Microsoft Visio and Microsoft Office</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Network Schematic Creation with Visio</li>
+        <li>Device Requirements Planning</li>
+        <li>Professional Documentation</li>
+        <li>Network Efficiency Analysis</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 6-->
+  <div id="modal-proj6" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj6')">&times;</span>
+      <h2>Travel Application</h2>
+      <br>
+      <p><strong>Description:</strong> Travel Application
+        Developing a C++-based application to select and calculate distances to various tourist attractions, making it
+        easier for users to plan their trips.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> C++ Only</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Tourist Destination Selection</li>
+        <li>Distance Calculation</li>
+        <li>Simple Interface</li>
+        <li>Tourist Data Management</li>
+        <li>Basic Trip Optimization</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+  <!--Modal Projects 7-->
+  <div id="modal-proj7" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-proj7')">&times;</span>
+      <h2>Laundry System Database</h2>
+      <br>
+      <p><strong>Description:</strong> Laundry System Database
+        Building a database system for recording laundry activities using phpMyAdmin and SQL, including storing
+        transactions, customers, and services.</p>
+      <br>
+      <p><strong>Tech Stack:</strong> PHP and SQL</p>
+      <br>
+      <p><strong>Key Features:</strong></p>
+      <ul style="margin-left: 15px;">
+        <li>Customer Data Management</li>
+        <li>Laundry Transaction Recording</li>
+        <li>Inter-Table Relationships</li>
+        <li>SQL Queries</li>
+        <li>Simple Reporting</li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------->
+
+</body>
+
+</html>

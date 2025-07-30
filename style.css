@@ -1,0 +1,861 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/bg4.png');
+    /* ganti dengan path gambarmu */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.4);
+    /* bikin gelap sedikit supaya teks kelihatan */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    background-color: transparent;
+    border-radius: 0 0 10px 10px;
+}
+
+header.scrolled {
+    background-color: rgba(20, 20, 20, 0.5);
+    /* transparan gelap, lebih soft */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* bayangan lebih dalam */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Efek garis bawah animasi */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+/* Saat hover: garis bawah muncul dari kiri */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.section {
+    height: 100vh;
+    padding: 100px 40px;
+}
+
+/*Blur Bg*/
+.blur-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.about-section,
+.portfolio-section {
+    background: transparent;
+}
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.home-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.home-content.align-left {
+    max-width: 600px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #cccccc;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Icon lebih kecil */
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.typing-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+#dynamic-role {
+    display: inline-block;
+    height: 2.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#dynamic-role .role-list {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+#dynamic-role .role-item {
+    height: 2.5rem;
+    color: #66ffcc;
+    /* Warna kalem untuk dark theme */
+}
+
+#dynamic-role {
+    display: inline-block;
+}
+
+.letter {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.letter-out {
+    animation: slideOut 0.5s forwards;
+}
+
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 60px;
+    min-height: 85vh;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px 10px 0 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    /* ini biar teks rata tengah terhadap foto */
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 240px;
+    height: 320px;
+    /* 3:4 ratio */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 40px;
+    color: #fff;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.stat-box {
+    display: flex;
+    align-items: flex-start;
+    /* <== ganti dari center */
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 16px 20px;
+    width: 100%;
+    max-width: 250px;
+    height: 75px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #111;
+    gap: 15px;
+}
+
+.stat-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    margin-right: 16px;
+}
+
+.stat-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stat-info h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.stat-info .subtext {
+    font-size: 0.55rem;
+    color: #000;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #000;
+}
+
+/*Divider*/
+.gradient-divider {
+  height: 2px;
+  width: 70%;
+  margin: 100px auto 60px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Portofolio Section */
+.portfolio-section {
+    padding: 100px 40px;
+    border-radius: 0 0 20px 20px;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.portfolio-tabs {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    gap: 10px;
+}
+
+.tab-bar-bg {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 10px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    border: none;
+    font-weight: 600;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-btn.active {
+    background: white;
+    color: #111;
+    font-weight: 700;
+}
+
+.cert-grid,
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.25);/* semitransparan putih */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardFadeUp 0.5s ease forwards;
+    color: #fff; /* biar teks tetap kontras */
+}
+
+.cert-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.cert-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.cert-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.cert-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.cert-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.cert-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.cert-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.cert-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+@keyframes cardFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cert-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #fff; /* teks jadi putih */
+}
+
+.card-body h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #fff;
+    flex: 1;
+}
+
+.detail-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.detail-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  color: #111;
+  padding: 24px 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.modal .close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 kolom */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.18);
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-left: 30px;
+}
+
+.skill-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 500;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.experience-details {
+    flex: 1;
+    color: white;
+}
+
+.experience-details h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.experience-details p {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Reuse cardFadeUp animasi */
+.skill-card,
+.experience-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardFadeUp 0.5s ease forwards;
+}
+
+.skill-card:nth-child(1),
+.experience-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-card:nth-child(2),
+.experience-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(3),
+.experience-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-card:nth-child(4),
+.experience-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-card:nth-child(5),
+.experience-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-card:nth-child(6),
+.experience-item:nth-child(6) {
+    animation-delay: 0.1s;
+}
+
+.skill-card:nth-child(7),
+.experience-item:nth-child(7) {
+    animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(8),
+.experience-item:nth-child(8) {
+    animation-delay: 0.3s;
+}
+
+.skill-card:nth-child(9),
+.experience-item:nth-child(9) {
+    animation-delay: 0.4s;
+}
+
+.skill-card:nth-child(10),
+.experience-item:nth-child(10) {
+    animation-delay: 0.5s;
+}
+
+.skill-card:nth-child(11),
+.experience-item:nth-child(11) {
+    animation-delay: 0.3s;
+}
+
+.skill-card:nth-child(12),
+.experience-item:nth-child(12) {
+    animation-delay: 0.4s;
+}
+
+.skill-card:nth-child(13),
+.experience-item:nth-child(13) {
+    animation-delay: 0.5s;
+}
+
+/* Tambah sesuai jumlah item kalau perlu */
+
+@keyframes cardFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section container blur & layout konsisten */
+/* Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 80px;
+}
+
+/* Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group i {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.form-group.textarea i {
+  top: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 16px 16px 45px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.1); /* transparan tipis */
+  backdrop-filter: blur(10px); /* tetap blur */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  color: #fff; /* biar teks tetep kebaca */
+}
+
+/* Tombol Send Message elegan */
+.contact-form button {
+  padding: 16px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Footer Profesional */
+.footer {
+  margin-top: 60px;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer .footer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer .footer-contact {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer .footer-social {
+  margin-top: 8px;
+}
+
+.footer .footer-social a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-social a:hover {
+  color: #aaa;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.tab-active {
+    display: block;
+    opacity: 1;
+}
